@@ -1,0 +1,19 @@
+Aeternus Group Rank customization (Info comes from https://discord.com/channels/1387670662264651927/1420638064216244244 )
+# This tutorial showcases customization of ranks/permissions for both user-owned AND group-owned games!
+## Customizing ranks
+### User-owned
+1. To customize ranks and permissions for specific people, go to game.ServerStorage.AeternusConfig.
+2. Open the module and look for "ManualRanks". here you can add a player's user ID, and assign them a rank based on the rank names in game.ServerScriptService.Server.Modules.RankNames (REMOVE THE PREVIOUS ONES I FORGOT TO 😭)
+### Group-owned
+1. Go to your group, configure community, and go to the roles tab.
+2. Ensure that your role's ranks match the permissions at the bottom of this tutorial, and adjust if needed.
+  - As an alternative, check out the additional section further down in this tutorial, at number 1.
+3. An additional setting you can adjust in game.ServerStorage.AeternusConfig is "PreferCustomRankNames". The comment there explains it to you.
+## Additional
+1. You can change these rank requirements for commands in game.ServerScriptService.Server.Modules.Commands or change the rank translations in game.ReplicatedStorage.Modules.Schematics.GroupRankTranslations
+2. You can assign custom titles to specific users in game.ServerStorage.AeternusConfig.
+3. Here are the default Aeternus rank command permissions:
+  - Rank 10 or above: Tester (access to game even if freetesting is off)
+  - Rank 100 or above: Moderator (basic moderator commands such as banning and unbanning)
+  - Rank 150 or above: Head Moderator (more dangerous moderator commands such as giving levels, money, malice, skins, global announcements, etc.)
+  - Rank 200 or above: Developer (access to testing commands such as open testing server or set server type)
