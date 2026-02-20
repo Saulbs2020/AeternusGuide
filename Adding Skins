@@ -18,4 +18,10 @@ RenderImage is the render of your skin, if you have no render for a skin you can
  ["RenderImage"] = nil
 Price is the price of your skin, you can set it to any number you want as long as its not negative!
 
+Now you need to add the rig of the skin! Go to Serverstorage, assets, skins, killer/survivor and to your character.
+Then drag or paste the rig of your skin and make sure to name it like with ReplicatedStorage
+Example: 
+Replicated Storage: TestNoob // Server Storage: TestNoob
+After doing so you can go ahead and test your skin!
+
 
