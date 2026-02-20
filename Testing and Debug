@@ -1,0 +1,13 @@
+Testing and Debug (Info comes from https://discord.com/channels/1387670662264651927/1420642876823703584 )
+## Enabling and Disabling testing mode
+1. Click on the workspace in your explorer.
+2. In your properties tab, scroll down until you see "Testing". You can toggle this on or off.
+## Enabling and Disabling free testing
+1. Go to game.ServerStorage.AeternusConfig
+2. You can set FreeTesting to true or false.
+## Chat Commands
+1. The !actor command, partially taken from Codename Redux so shoutout to them, summons a fake actor in the format: !actor ActorName ActorType Quantity(Optional) SkinName(Optional)
+2. The !kill command kills all characters on a certain team. Example: !kill Survivors
+## Additional
+1. There's also a command called "Open Testing Server" for developers and above which opens up a testing server ingame.
+2. Outside of runtime, you can store StudioAssets directly inside of workspace (destroys on runtime if not testing, still a little unsafe), OR you can take the safer route and store it in game.ServerStorage.Miscellaneous
