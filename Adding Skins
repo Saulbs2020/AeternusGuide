@@ -1,1 +1,21 @@
 # Making your own skin
+In order to make a skin for a certain character,go to ReplicatedStorage, Assets, Skins,Killer/Survivor, and then select the character you want to add a skin for.
+Copy any of their skins, then rename it to what you'd like EXAMPLE: TestNoob
+After renaming your skin, go to their config.
+You will probably see this:
+local v1 = {
+ ["DisplayName"] = "ClassicNoob",
+["Description"] = "2009",
+["RenderImage"] = "rbxassetid://8381911105954",
+["Price"] = "200",
+}
+
+return v1
+    
+DisplayName is the name of your skin that will be displayed in the shop and inventory
+Description is the description of your skin.. yeah.
+RenderImage is the render of your skin, if you have no render for a skin you can simply just set RenderImage to:
+ ["RenderImage"] = nil
+Price is the price of your skin, you can set it to any number you want as long as its not negative!
+
+
