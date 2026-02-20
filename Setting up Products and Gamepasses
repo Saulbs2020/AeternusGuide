@@ -1,0 +1,11 @@
+Setting up products and gamepasses (Info comes from https://discord.com/channels/1387670662264651927/1420641923705737337 )
+## Replacing products with your own
+1. Go to game.ReplicatedStorage.Modules.Schematics.Products
+2. Here, you can either remove all these products and replace them with your own, or you can keep these ones and keep following the tutorial.
+3. Go to [your creator dashboard](<https://create.roblox.com/dashboard/creations>) and click on your game.
+4. For each product id in the products module, follow these steps 5-7.
+5. Scroll down to check its "ProductType". Back in your creator dashboard, scroll down until you see "Monetization", and under it find the product's ProductType. (DevProduct = Developer Products, Gamepass = Passes).
+6. Create a new product/pass, set it's name, description and price to whatever you want, then click the three dots on it and click "Copy Asset Id".
+7. Go back to the products module and replace the previous product id with your new one.
+## Additional
+1. In game.ServerStorage.AeternusConfig, you can enable "FreeVIP" to give everyone in the game free VIP.
