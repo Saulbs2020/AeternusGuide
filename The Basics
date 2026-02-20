@@ -1,0 +1,20 @@
+** Initial Setup**
+1. Download and open the file
+2. Publish to roblox
+3. In File > Game Settings, enable the following settings:
+  - Security > Allow HTTP requests
+  - Security > Enable studio access to API services
+  - Security > Allow Third Party Teleports (OPTIONAL, ITS FOR THIS ONE ADMIN COMMAND)
+4. In File > Avatar Settings, enable to following settings:
+  - Three dots (top right corner) > R6 Only
+5. You can spoof animations as you like, but personally I use this program: <https://github.com/kartFr/Asset-Reuploader/releases>. If you plan on using a different method, you can skip the next steps.
+6. Download the latest version for your device, and install it.
+7. Download the .rbxm file in the latest version, drag it into roblox studio, right click on the imported folder, and click Save/Export > Save as local plugin
+8. Find the new plugin in your plugins tab, and enable the following settings:
+  - Filter > Search scripts
+  - Filter > Search int/number values
+  - Filter > Search string values
+  - Filter > Place Id > Input 117882128313801 and click the plus button, then input 18687417158 and click the plus button again.
+-#     - IF THE ANIMATION SPOOFER FAILS TO CONNECT TO LOCALHOST, TRY SETTING THE PORT TO 38073 IN SETTINGS TAB
+9. Open the app you downloaded in step 6, and you can begin using the plugin to spoof your animations! Once you click reupload, you may have to wait a few minutes for the reuploading to start. It's annoying, but you just have to deal with it. Repeat the process until most are spoofed.
+10. For animations that cannot be spoofed, or sounds, you may have to resort to a manual spoofing method. For this, I use <@1443777170253287476> (type /download in <#1430856535415722034> ) or [privateassetdownloader](<https://github.com/ClaytonTDM/robloxAssetDownloader/releases>), which runs locally and does not require your main account's cookie (you can use an alt).
