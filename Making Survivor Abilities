@@ -7,7 +7,7 @@ If not then duplicate a survivor folder that has behavior and config and just pu
 We'll be using this code to make an ability:
 
 ["Template"] = {
-	LayoutOrder = 99,
+	LayoutOrder = 1,
 	Icon = "rbxassetid://0",
 	KeybindType = "AltAbility1",
 	Cooldown = 0,
