@@ -1,0 +1,84 @@
+Making Custom Survivor Abilities
+
+In order to make your own abilities for a custom survivor.
+Make sure you already have a survivor in replicated storage and their rig inside of server storage.
+If not then duplicate a survivor folder that has behavior and config and just put your rig inside of serverstorage - assets - survivors (YOUR SURVIVOR FOLDER)
+
+We'll be using this code to make an ability:
+
+["Template"] = {
+	LayoutOrder = 99,
+	Icon = "rbxassetid://0",
+	KeybindType = "AltAbility1",
+	Cooldown = 0,
+	Callback = function(actor)
+		local RunService = game:GetService("RunService")
+
+		if RunService:IsServer() then
+			actor.AbilitiesDisabled = true
+
+			task.delay(0, function()
+				
+			end)
+
+			actor.AbilitiesDisabled = false
+
+		else
+			
+		end
+	end
+},
+
+MAKING A STUNNING/DAMAGE ABILITY
+In order to make an ability have a hitbox you'll be needing this:
+			task.delay(0.3, function()
+
+				require(game.ReplicatedStorage.Modules.Hitboxes):CreateHitbox(actor.Player, {
+					Size = Vector3.new(6,5,6),
+					CFrame = actor.Rig:GetPivot(),
+					CFrameOffset = CFrame.new(0,0,-3),
+					Time = 0.2,
+					Knockback = 4,
+					HitMultiple = true,
+					Damage = 25
+					Connections = {
+						Hit = function(target)
+							
+						end
+					}
+				})
+
+			end)
+--------------------------------------------------------------------------
+ - This code is used to generate the hitbox, you may find the hitbox module through
+ReplicatedStorage - Modules - Hitboxes.
+require(game.ReplicatedStorage.Modules.Hitboxes):CreateHitbox(actor.Player, {
+ - After adding this line of code, make sure to add this:
+Size = Vector3.new(6,5,6),
+CFrame = actor.Rig:GetPivot(),
+CFrameOffset = CFrame.new(0,0,-3),
+Time = 0.2,
+Knockback = 4,
+HitMultiple = true,
+Damage = 20,
+	Connections = {
+		Hit = function(target)
+							
+				end
+			}
+
+Size - The size of your ability hitbox
+CFrame - Where the hitbox will be generated at (DO NOT TOUCH THIS)
+CFrameOffset = Offset position of your hitbox. (Depending on your ability, you can adjust this)
+Time = The amount of time the hitbox will stay generated.
+Knockback = The amount of knockback the ability gives.. thats it.
+HitMultiple = Self explanatory, gives the hitbox the ability to hit more than 1 player.
+Damage = How much damage the hitbox does to a player.
+
+EXTRA:
+Friendlyfire = Enables the ability to hit players in your team, (Killer or Survivor)
+ExecuteOnKill = (KILLER ONLY) When a player is low, if your killer has execution anims it will play the execution animation.
+
+
+
+
