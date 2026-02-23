@@ -1,0 +1,32 @@
+GlobalTypes
+ActorAbility = 
+export type ActorAbility = {
+	LayoutOrder: number,
+	Icon: string,
+	KeybindType: string,
+	Cooldown: number?,
+	Charges: number?,
+	Callback: (actor: Actor) -> ()
+}
+LayoutOrder = The order of the ability (Example: LayoutOrder = 1,)
+Icon = The icon of your ability. (Example: Icon = "rbxassetid://0",)
+KeybindType = (PC ONLY) The keybind of your ability. (Example: KeybindType = AltAbility1,
+Cooldown = The cooldown of your ability (Example: Cooldown = 10,
+Charges = The amount of charges your ability has (Example: Charges = 3,
+Callback = The fuction where your ability behavior is made
+
+export type ActorBehavior = {
+	Abilities: { [string]: ActorAbility },
+
+	Created: ((self: ActorBehavior, actor: Actor) -> ())?,
+	OnIntroduction: ((self: ActorBehavior, actor: Actor, rig: Model, duration: number) -> ())?,
+	OnKill: ((self: ActorBehavior, actor: Actor, victim: Model) -> ())?,
+	OnExecution: ((self: ActorBehavior, actor: Actor, victim: Model) -> ())?,
+	OnVictory: ((self: ActorBehavior, state: string, actor: Actor, rig: Model, cameraTrack: any) -> ())?
+}
+(ALL OF THESE AREN'T USED IN ABILITIES THEY ARE FUCTION ONLY)
+Created = When your actor behavior is created, can be used for passives.
+OnIntroduction = (KILLER ONLY) In introduction, can be used to change how the introduction works or move props and stuff.
+OnKill = (SURVIVOR ONLY) When a survvor dies, can be used to play a sound or smth.
+OnExecution = (KILLER ONLY) When a killer kills a survivor, can be used to give the killer a buff or smth.
+OnVictory = I actually have no idea how I could explain this one.
